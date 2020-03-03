@@ -1,6 +1,6 @@
 FROM centos
 RUN yum install -y java
 VOLUME /tmp
-EXPOSE 8010
+EXPOSE 8080
 ADD /target/API_Services_VNF_LCM-1.0.0.jar dockerdemo.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/dockerdemo.jar"]
