@@ -12,7 +12,7 @@
 	<artifactId>HelloWorldMicroservice</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<name>API_Services_VNF_LCM</name>
+	<name>HelloWorldMicroservice</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
