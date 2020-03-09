@@ -20,7 +20,7 @@
 	</properties>
 <plugin>
     <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.7.0</version>
+    <version>3.6.3</version>
     <configuration>
         <fork>true</fork>
         <executable>/var/java/jdk1.8.0_231/bin/javac</executable>
