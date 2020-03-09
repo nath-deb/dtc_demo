@@ -18,14 +18,6 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-<plugin>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.6.3</version>
-    <configuration>
-        <fork>true</fork>
-        <executable>/var/java/jdk1.8.0_231/bin/javac</executable>
-    </configuration>
-</plugin>
 	
 	<dependencies>
 		<dependency>
@@ -56,6 +48,12 @@
 	<build>
 		<plugins>
 			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+                                <version>3.6.3</version>
+                                <configuration>
+                                   <fork>true</fork>
+                                   <executable>/var/java/jdk1.8.0_231/bin/javac</executable>
+                                </configuration>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
