@@ -18,7 +18,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -43,13 +43,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		<dependency>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.6.3</version>
-                        <type>maven-plugin</type>
-                </dependency>
 	</dependencies>
 
 	<build>
@@ -59,13 +52,13 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-                                <artifactId>maven-compiler-plugin</artifactId>
-                                <version>3.6.3</version>
-                                <configuration>
-                                    <fork>true</fork>
-                                    <executable>/usr/lib/jvm/java-11-openjdk-amd64/bin/javac</executable>
-                                </configuration>
-                        </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
