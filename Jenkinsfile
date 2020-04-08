@@ -13,15 +13,15 @@ pipeline {
             steps{
                 echo "########### Initializing Maven Build ############"
                 echo "$WORKSPACE"
-				sh "cd $WORKSPACE"
+		sh "cd $WORKSPACE"
                 sh "/opt/apache-maven-3.6.3/bin/mvn clean install"
             }
         }
       stage ("Docker Image Build"){
 	        steps{
 			    echo "####### Docker Image Build ##########"
-				sh "cd $WORKSPACE"
-				sh "docker build -t demodtchelloworld-image:v5 ."
+			    sh "cd $WORKSPACE"
+			    sh "docker build -t demodtchelloworld-image:v1 ."
 	        }
       }
 	  stage ("Select Proceed For Final Deployment"){
@@ -32,7 +32,7 @@ pipeline {
 	  stage ("Application Deployment on Docker Container"){
 	         steps{
 	             echo "######### Deployming Microservice on Docker Container ###########"
-	             sh "docker run --name=demo_dtc_01 -d -p 8080:8080 demodtchelloworld-image:v5"
+	             sh "docker run --name=demo_dtc_01 -d -p 8080:8080 demodtchelloworld-image:v1"
 	            }
 	       }
 	  }
