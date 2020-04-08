@@ -21,7 +21,7 @@ pipeline {
 	        steps{
 			    echo "####### Docker Image Build ##########"
 			    sh "cd $WORKSPACE"
-			    sh "docker build -t demodtchelloworld-image:v3 ."
+			    sh "docker build -t demodtchelloworld-image:v4 ."
 	        }
       }
 	  stage ("Select Proceed For Final Deployment"){
@@ -32,7 +32,7 @@ pipeline {
 	  stage ("Application Deployment on Docker Container"){
 	         steps{
 	             echo "######### Deployming Microservice on Docker Container ###########"
-	             sh "docker run --name=demo_dtc_02 -d -p 8010:8010 demodtchelloworld-image:v3"
+	             sh "docker run --name=demo_dtc_03 -d -p 8080:8080 demodtchelloworld-image:v4"
 	            }
 	       }
 	  }
