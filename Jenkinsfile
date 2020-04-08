@@ -32,7 +32,7 @@ pipeline {
 	  stage ("Application Deployment on Docker Container"){
 	         steps{
 	             echo "######### Deployming Microservice on Docker Container ###########"
-	             sh "docker run --name=demo_dtc_01 -d -p 8080:8010 demodtchelloworld-image:v2"
+	             sh "docker run --name=demo_dtc_01 -d -p 8010:8010 demodtchelloworld-image:v2"
 	            }
 	       }
 	  }
